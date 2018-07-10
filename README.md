@@ -13,4 +13,16 @@ I think that's what you meant? In production I would do it probably by making a 
 
 All the logic is in ./src/components/SimpleForm.vue
 
+To run do:
 
+`git clone git@github.com:gergalerg/HeliosVueExample.git`
+
+`cd HeliosVueExample`
+
+`npm install`
+
+`npm run start`
+
+Open browser to:
+
+`http://localhost:8080/`
