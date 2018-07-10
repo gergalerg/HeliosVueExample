@@ -14,16 +14,23 @@ window.__URL__ = {
 }
 export default {
   name: 'SimpleForm',
-  data:  () =>{
+  data:  () => {
 return  {  message: "", firstName: "", lastName: "" , email: ""}
   },
   methods: {
 	send: function() {
 		const data = JSON.stringify(
-		{firstName: this.firstName, lastName: this.lastName, email: this.email});
-		fetch(window.__URL__['global_url'], {method: 'POST',body: data}).then(res=>{this.message = "Your data has been sent";return res.json()}).catch(err=>err);
-}
-}
+		{firstName: this.firstName, 
+		lastName: this.lastName, 
+		email: this.email});
+
+		fetch(window.__URL__['global_url'], 
+			{method: 'POST',body: data})
+		.then(res=> { this.message = "Your data has been sent";
+			return res.json()})
+		.catch(err=>err);
+		}
+	}
 }
 </script>
 

@@ -8,3 +8,6 @@ After entering first, last and email a button is clicked to send to the url usin
 
 A global window.__URL__ object is created allowing anybody to change the URL in the console.
 
+All the logic is in ./src/components/SimpleForm.vue
+
+
