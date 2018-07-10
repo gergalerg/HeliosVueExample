@@ -18,8 +18,8 @@ export default {
 return  {  message: "", firstName: "", lastName: "" , email: ""}
   },
   methods: {
-clear_form: function() {
-	this.message = '';	
+	clear_form: function() {
+		this.message = '';	
 	},
 	send: function() {
 		const data = JSON.stringify(
