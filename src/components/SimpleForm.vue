@@ -27,6 +27,9 @@ return  {  message: "", firstName: "", lastName: "" , email: ""}
 		fetch(window.__URL__['global_url'], 
 			{method: 'POST',body: data})
 		.then(res=> { this.message = "Your data has been sent";
+			this.firstName = '';
+			this.lastName = '';
+			this.email = '';
 			return res.json()})
 		.catch(err=>err);
 		}
