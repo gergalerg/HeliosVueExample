@@ -1,5 +1,3 @@
-It's not pretty but it works.
-
 Running on Node v10.6.0 (and Node v8.11.3) locally. 
 
 It uses a helios logo in CSS just moving around the screen.
