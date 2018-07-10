@@ -16,8 +16,11 @@ All the logic is in ./src/components/SimpleForm.vue
 To run do:
 
 `git clone git@github.com:gergalerg/HeliosVueExample.git`
+
 `npm install`
+
 `npm run start`
 
 Open browser to:
+
 `http://localhost:8080/`
