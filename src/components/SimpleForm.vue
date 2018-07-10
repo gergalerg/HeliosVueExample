@@ -21,8 +21,7 @@ return  {  message: "", firstName: "", lastName: "" , email: ""}
 	send: function() {
 		const data = JSON.stringify(
 		{firstName: this.firstName, lastName: this.lastName, email: this.email});
-		console.log(window.__URL__['global_url']);
-		fetch(this.$globalURL, {method: 'POST',body: data}).then(res=>{this.message = "Your data has been sent"; }).catch(err=>err);
+		fetch(window.__URL__['global_url'], {method: 'POST',body: data}).then(res=>{this.message = "Your data has been sent";return res.json()}).catch(err=>err);
 }
 }
 }
