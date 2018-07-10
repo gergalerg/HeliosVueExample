@@ -1,8 +1,8 @@
 <template>
 	<div class="SimpleForm">
-		<input v-model="firstName" placeholder="first name" v-on:keyup="clear_message">
-		<input v-model="lastName" placeholder="last name" v-on:keyup="clear_message">
-		<input v-model="email" placeholder="email" v-on:keyup="clear_message">
+		<input v-model="firstName" placeholder="first name" @keyup="clear_message">
+		<input v-model="lastName" placeholder="last name" @keyup="clear_message">
+		<input v-model="email" placeholder="email" @keyup="clear_message">
 		<p>{{ message }}</p>
 		<button v-on:click="send">Create Request bin</button>
 	</div>
@@ -28,12 +28,12 @@ return  {  message: "", firstName: "", lastName: "" , email: ""}
 		email: this.email});
 
 		fetch(window.__URL__['global_url'], 
-			{method: 'POST',body: data})
+			{method: 'PUT',mode: 'cors', body: data})
 		.then(res=> { this.message = "Your data has been sent";
 			this.firstName = '';
 			this.lastName = '';
 			this.email = '';
-			return res.body})
+			return res})
 		.catch(err=>err);
 		}
 	}
