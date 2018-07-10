@@ -1,8 +1,8 @@
 <template>
 	<div class="SimpleForm">
-		<input v-model="firstName" placeholder="first name" value="Greg">
-		<input v-model="lastName" placeholder="last name">
-		<input v-model="email" placeholder="email">
+		<input v-model="firstName" placeholder="first name" v-on:keyup="clear_form">
+		<input v-model="lastName" placeholder="last name" v-on:keyup="clear_form">
+		<input v-model="email" placeholder="email" v-on:keyup="clear_form">
 		<p>{{ message }}</p>
 		<button v-on:click="send">Create Request bin</button>
 	</div>
@@ -18,6 +18,9 @@ export default {
 return  {  message: "", firstName: "", lastName: "" , email: ""}
   },
   methods: {
+clear_form: function() {
+	this.message = '';	
+	},
 	send: function() {
 		const data = JSON.stringify(
 		{firstName: this.firstName, 
@@ -30,7 +33,7 @@ return  {  message: "", firstName: "", lastName: "" , email: ""}
 			this.firstName = '';
 			this.lastName = '';
 			this.email = '';
-			return res.json()})
+			return res.body})
 		.catch(err=>err);
 		}
 	}
