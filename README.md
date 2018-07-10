@@ -17,6 +17,8 @@ To run do:
 
 `git clone git@github.com:gergalerg/HeliosVueExample.git`
 
+`cd HeliosVueExample`
+
 `npm install`
 
 `npm run start`
